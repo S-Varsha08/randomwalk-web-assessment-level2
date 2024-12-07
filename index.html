@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container"> <!--It is the main container that holds all the elements of the webpage -->
+        <div class="left-container"> <!-- It is the left container section, where the player's turn message is displayed with player's name -->
+            <div class="welcome"> <!-- It is the section for the "Tic Tac Toe" text -->
+                <h1>TIC</h1>
+                <h1>TAC</h1>
+                <h1>TOE</h1>
+            </div>
+            <p id="gameStatus">Player X's Turn</p>
+        </div>
+        
+        <div class="game-wrapper"> <!--Wrapper for the game board to center and style the grid -->
+            <div id="gameBoard" class="board"></div>
+        </div>
+        
+        <div class="scoreboard"> <!-- It is the section for displaying the players' scores -->
+            <p>Player <span id="player1Display">X</span>: <span id="scoreX">0</span></p>
+            <p>Player <span id="player2Display">O</span>: <span id="scoreO">0</span></p>
+        </div>
+        
+
+        
+        <button id="resetGame">Reset Game</button>
+        <div id="winnerOverlay" class="overlay hidden">
+            <div class="celebration"> <!-- It is the container for the celebration message displayed inside the overlay -->
+                <h2 id="winnerMessage"></h2>
+                <button id="playAgain">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>

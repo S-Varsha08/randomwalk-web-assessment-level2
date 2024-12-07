@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Tic Tac Toe</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body class="start-page">
+    <div class="container">
+        <div class="form-container">
+            <h1>Enter Player Names</h1>
+            <form id="nameForm">
+                <label for="player1">Player 1 (X):</label>
+                <input type="text" id="player1" placeholder="Enter Player 1 Name" required>
+                
+                <label for="player2">Player 2 (O):</label>
+                <input type="text" id="player2" placeholder="Enter Player 2 Name" required>
+                <br>
+                <br>
+                <button type="submit">Start Game</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // It is created such that javaScript handles form submission and store player names
+        document.getElementById('nameForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const player1Name = document.getElementById('player1').value;
+            const player2Name = document.getElementById('player2').value;
+
+            // It stores names in localStorage to use in the main game
+            localStorage.setItem('player1', player1Name);
+            localStorage.setItem('player2', player2Name);
+
+            // It redirects to the main game page
+            window.location.href = 'index.html'; 
+        });
+    </script>
+</body>
+</html>

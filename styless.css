@@ -1,0 +1,62 @@
+
+
+body.start-page {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/39a931202530759.Y3JvcCw3NDksNTg2LDIwMCw0MzQ.png'); /* Your background image URL */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Font color */
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for contrast */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    display: block;
+}
+
+input {
+    padding: 10px;
+    font-size: 2rem;
+    margin: 10px 0;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #912001;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #bb00ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-top: 20px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

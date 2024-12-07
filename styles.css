@@ -1,0 +1,192 @@
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e7cde, #b9c4ed); /* It applies smooth gradient background */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://c8.alamy.com/comp/PTHJD9/close-up-picture-of-tic-tac-toe-game-noughts-and-crosses-on-dark-background-selective-focus-color-toning-applied-PTHJD9.jpg'); /* Your Google Image URL */
+    background-size: cover;
+    background-position: center;
+    filter: blur(7px); /* Apply blur to the background */
+    z-index: -1; /* Ensure the background is behind content */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+    position: relative;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 200px; /* Adjust space between Tic Tac Toe and grid */
+    text-align: left;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color:black;
+    
+}
+
+.welcome h1 {
+    font-size: 5rem;
+    font-family: 'Times New Roman', serif;
+    color: #100000;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /*Centers the game board content */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-bottom: -20px;
+    margin-right: 100px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: 'Georgia', serif;
+    color: #efe9e9;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+.cell.taken {
+    cursor: not-allowed;
+    color: #9100d4;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    font-size: 3rem;
+    color:  #000000;
+    text-align: left;
+    margin-top: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.scoreboard p {
+    margin: 10px 0; /* Add space between the player sections */
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #ff007b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-top: 20px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #76018b;
+}
+
+button#resetGame {
+    position: absolute;
+    bottom: -50px;
+    left: 48%;
+    transform: translateX(-50%);
+}
+
+/* Overlay for the winner announcement */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.celebration {
+    text-align: center;
+    color: white;
+    font-family: 'Georgia', 'sans';
+    font-size: 2rem;
+    animation: pop 0.6s ease-out;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+button#playAgain {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff007b;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+button#playAgain:hover {
+    background-color: #0056b3;
+}
